@@ -1,0 +1,580 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #0a0a0a;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 25px;
+}
+
+.main-nav a {
+    color: #f0b90b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #fff;
+}
+
+/* Hero-секция */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/background.jpg') no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #f0b90b;
+    text-shadow: 0 0 10px rgba(240, 185, 11, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.primary {
+    background-color: #f0b90b;
+    color: #000;
+}
+
+.primary:hover {
+    background-color: #ffd700;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(240, 185, 11, 0.4);
+}
+
+.secondary {
+    background-color: transparent;
+    color: #f0b90b;
+    border: 2px solid #f0b90b;
+}
+
+.secondary:hover {
+    background-color: rgba(240, 185, 11, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Преимущества */
+.advantages {
+    padding: 80px 0;
+    background-color: #1a1a1a;
+}
+
+.advantages h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #f0b90b;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.advantage-item {
+    text-align: center;
+    padding: 30px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.advantage-item:hover {
+    transform: translateY(-10px);
+}
+
+.advantage-item .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.advantage-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #f0b90b;
+}
+
+/* Общие стили для секций контента */
+.content-section {
+    padding: 80px 0;
+}
+
+.content-section:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+.content-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #f0b90b;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.content-grid.reverse {
+    direction: rtl;
+}
+
+.content-grid.reverse .content-text {
+    direction: ltr;
+}
+
+.content-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #f0b90b;
+}
+
+.content-text ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.content-text li {
+    margin-bottom: 10px;
+}
+
+.content-sticker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.icon-emoji {
+    font-size: 5rem;
+}
+
+/* Секция бонусов */
+.bonuses {
+    background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)), url('./assets/bonuses-bg.jpg') no-repeat center center/cover;
+}
+
+/* Отзывы */
+.reviews {
+    padding: 80px 0;
+    background-color: #1a1a1a;
+}
+
+.reviews h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #f0b90b;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.review-item {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.review-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f0b90b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+.review-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.review-rating {
+    color: #f0b90b;
+}
+
+/* Кнопка "Весь список отзывов" */
+.reviews-button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.reviews-button {
+    background-color: #f0b90b;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.reviews-button:hover {
+    background-color: #ffd700;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(240, 185, 11, 0.4);
+}
+
+/* Таблица выплат */
+.payouts {
+    padding: 80px 0;
+    background-color: #0a0a0a;
+}
+
+.payouts h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #f0b90b;
+}
+
+.payouts-table {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.payouts-header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #2a2a2a;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+
+.payouts-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.payouts-row:last-child {
+    border-bottom: none;
+}
+
+/* Игры */
+.games {
+    padding: 80px 0;
+    background-color: #1a1a1a;
+}
+
+.games h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #f0b90b;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.game-item {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.game-item:hover {
+    transform: translateY(-10px);
+}
+
+.game-sticker {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.game-item h3 {
+    padding: 15px 0 10px;
+    font-size: 1.2rem;
+}
+
+.game-rating {
+    color: #f0b90b;
+}
+
+/* FAQ */
+.faq {
+    padding: 80px 0;
+    background-color: #0a0a0a;
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #f0b90b;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border: none;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f0b90b;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+}
+
+.faq-answer {
+    padding: 0 20px;
+    background-color: #2a2a2a;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer.open {
+    padding: 20px;
+    max-height: 500px;
+}
+
+/* Подвал */
+.footer {
+    background-color: #1a1a1a;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    height: 60px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: #f0b90b;
+    text-decoration: none;
+    margin: 0 15px 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-info {
+    text-align: center;
+    color: #aaa;
+}
+
+.footer-info p {
+    margin-bottom: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero {
+        height: 80vh;
+        background-size: cover;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-grid.reverse {
+        direction: ltr;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-nav li {
+        margin: 5px 10px;
+    }
+    
+    .payouts-header,
+    .payouts-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .payouts-header div:nth-child(n+3),
+    .payouts-row div:nth-child(n+3) {
+        display: none;
+    }
+    
+    .icon-emoji {
+        font-size: 3rem;
+    }
+    
+    .reviews-button-container {
+        padding: 0 20px;
+    }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-section {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Плавная прокрутка */
+html {
+    scroll-behavior: smooth;
+}
